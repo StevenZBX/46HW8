@@ -80,9 +80,6 @@ VertexList Graph::edges_from(Vertex vertex) const{
         if (e.u == vertex){
             result.push_back(e.v);
         }
-        if (e.v == vertex){
-            result.push_back(e.u);
-        }
     }
     return result;
 }
@@ -159,6 +156,7 @@ void file_to_graph(string filename, Graph & G){
     ifstream in(filename);
     if (!in){
         error("no such file");
+        return;
     }
 
     G.clear();
