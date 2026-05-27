@@ -159,9 +159,7 @@ void file_to_graph(string filename, Graph & G){
         return;
     }
 
-    G.clear();
     in >> G;
-    in.close();
 }
 
 string get_arg(int argc, char *argv[], string def){
